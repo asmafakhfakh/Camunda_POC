@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import EmployeeUI from './EmployeeUI';
+import ApproverUI from './ApproverUI';
+
+const ContainerStyle = {
+  display: 'flex',
+  justifyContent: 'space-around',
+}
+const FunctionalStyle = {
+  border: '1px solid rgba(0, 0, 0, 1)',
+  width: '45%',
+  height: '90vh'
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Camunda POC</h1>
+      <div style={ContainerStyle}>
+        <div style={FunctionalStyle}>
+          <EmployeeUI/>
+        </div>
+        <div style={FunctionalStyle}>
+          <h4> HR UI </h4>
+          <ApproverUI/>
+        </div>
+      </div>
     </div>
   );
 }
