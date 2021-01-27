@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1jqwzog" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.5.0">
+  <decision id="decideApprover" name="decide on approver">
+    <decisionTable id="DecisionTable_10r46qv" hitPolicy="FIRST">
+      <input id="Input_1" label="team" camunda:inputVariable="team">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>team</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="approver" name="approver" typeRef="string" />
+      <rule id="DecisionRule_0ork93e">
+        <inputEntry id="UnaryTests_0quq1tm">
+          <text>"developer"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14jowir">
+          <text>"baazhr"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dxtrf8">
+        <inputEntry id="UnaryTests_0p7rxt4">
+          <text>"business"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16xdep7">
+          <text>"baazhr"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_186jh2b">
+        <inputEntry id="UnaryTests_04evwjn">
+          <text>"administration"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t3bhu3">
+          <text>"baazhr"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fkuw78">
+        <inputEntry id="UnaryTests_0bvgxd9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nealst">
+          <text>"baazceo"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="decideApprover">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
